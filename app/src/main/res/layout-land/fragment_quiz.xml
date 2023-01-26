@@ -15,73 +15,61 @@
             android:id="@+id/imageView"
             android:layout_width="131dp"
             android:layout_height="125dp"
-            android:layout_marginTop="135dp"
-            app:layout_constraintBottom_toTopOf="@+id/question_text"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/blue_circle_emoji_clipart_md" />
 
         <TextView
             android:id="@+id/score_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.088"
             tools:text="24" />
 
         <TextView
             android:id="@+id/question_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
             android:textColor="#574949"
             android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/score_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/football_button"
+            app:layout_constraintStart_toStartOf="@+id/musician_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.367"
             tools:text="Franco Foda" />
 
         <Button
             android:id="@+id/musician_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="372dp"
             android:text="Musiker"
-            app:layout_constraintEnd_toStartOf="@+id/football_button"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
         <Button
             android:id="@+id/football_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
             android:text="Fussballer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/musician_button"
-            app:layout_constraintTop_toTopOf="@+id/musician_button" />
-
-        <TextView
-            android:id="@+id/wrong_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_text"
-            tools:text="Falsche Antwort" />
+            app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

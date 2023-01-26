@@ -1,5 +1,6 @@
 package com.example.quizit
 
+import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.quizit.data.QuizRepository
 import com.example.quizit.data.model.Question
@@ -30,10 +31,6 @@ class QuizViewModel : ViewModel(){
 
         } else {
             _currentQuestion = nextQuestion
-        }
-        fun restartGame() {
-            _score = 0
-            getNextQuestion()
         }
     }
 

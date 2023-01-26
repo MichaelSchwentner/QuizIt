@@ -16,6 +16,7 @@ class QuizFragment : Fragment() {
 
     private val viewModel : QuizViewModel by viewModels()
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,11 +32,21 @@ class QuizFragment : Fragment() {
 
         binding.musicianButton.setOnClickListener {
             viewModel.checkAnswer(true)
+            if (!viewModel.currentQuestion.isMusician){
+                binding.wrongText!!.text = "Falsche Antwort"
+            } else{
+                binding.wrongText!!.text = ""
+            }
             updateUi()
         }
 
         binding.footballButton.setOnClickListener {
             viewModel.checkAnswer(false)
+            if (viewModel.currentQuestion.isMusician){
+                binding.wrongText!!.text = "Falsche Antwort"
+            } else{
+                binding.wrongText!!.text = ""
+            }
             updateUi()
         }
     }
