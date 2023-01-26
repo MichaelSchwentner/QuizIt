@@ -32,21 +32,21 @@ class QuizFragment : Fragment() {
 
         binding.musicianButton.setOnClickListener {
             viewModel.checkAnswer(true)
-            if (!viewModel.currentQuestion.isMusician){
+/*            if (!viewModel.currentQuestion.isMusician){
                 binding.wrongText!!.text = "Falsche Antwort"
             } else{
                 binding.wrongText!!.text = ""
-            }
+            }*/
             updateUi()
         }
 
         binding.footballButton.setOnClickListener {
             viewModel.checkAnswer(false)
-            if (viewModel.currentQuestion.isMusician){
+/*            if (viewModel.currentQuestion.isMusician){
                 binding.wrongText!!.text = "Falsche Antwort"
             } else{
                 binding.wrongText!!.text = ""
-            }
+            }*/
             updateUi()
         }
     }
